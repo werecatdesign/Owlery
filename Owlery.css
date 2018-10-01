@@ -5,6 +5,17 @@ body {
     background-color: #000000;
 }
 
+.motionpath_path {
+    fill:none;
+    stroke: #ffffff;
+    stroke-width: 5px;
+}
+
+#owldiv {
+    width: 200px;
+    height: 200px;
+}
+
 .owlpath {
     fill: #12ccff;
     stroke: #ffffff;
