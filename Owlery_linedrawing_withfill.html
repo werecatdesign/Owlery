@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Owlery</title>
+        <meta charset = "UTF-8">
+        <link rel = "stylesheet" href = "Owlery.css">        
+    </head>
+    <body>
+        <svg id = "owl1" width = "100%" height = "100%" viewBox = "0 0 500 300">
+            
+            
+            <g id ="owlg">
+                <path class = "owlpath el" d = "M150,50 L190,85 C225,65 275,65 310,85 L350,50 330,100 C335,110 345,130 345,155 C345,220 325,220 320,225 C290,250 260,250 250,250 C240,250 210,250 180,225 C175,220 155,220 155,155 C155,130 165,110 170,100 z" /> 
+
+                <circle class ="eyewhite el" cx = "210" cy = "130" r = "25"></circle>
+                <circle class ="eyewhite el" cx = "290" cy = "130" r = "25"></circle>
+                <circle class ="eyeblack el" cx = "210" cy = "130" r = "10"></circle>
+                <circle class ="eyeblack el" cx = "290" cy = "130" r = "10"></circle> 
+
+                <path class = "beak el" d ="M230,155 270,155 250,185 z"></path>
+
+                <path class = "foot el" d= "M165,245
+                                         C180,210 200,210 215,245 z"></path>
+
+                <path class = "foot el" d= "M285,245
+                                         C300,210 320,210 335,245 z"></path>
+            </g>
+            
+            
+        </svg> 
+        
+        <script src = "anime-master/anime.js"></script>
+        
+        <script>
+           
+            var fillTimeline = anime.timeline({                
+                duration: 1500,
+                easing: 'easeInOutSine'
+            });
+            
+            fillTimeline 
+                .add({
+                    targets: '#owlg .owlpath',
+                    strokeDashoffset: [anime.setDashoffset, 0],
+                    offset: 0
+                })
+                .add({
+                    targets: '#owlg .owlpath',                    
+                    fill: [{value:'rgba(0, 0, 0, 0)'}, {value: '#12ccff'}],                     
+                    offset: 1500
+                })
+                .add({
+                    targets: '#owlg .eyewhite', 
+                    strokeDashoffset: [anime.setDashoffset, 0],                                       
+                    offset: 3000
+                })
+                .add({
+                    targets: '#owlg .eyewhite',                    
+                    fill: [{value:'rgba(0, 0, 0, 0)'},
+                        {value: '#ffffff'}                        
+                      ],                    
+                    offset: 4500
+                })
+                .add({
+                    targets: '#owlg .eyeblack',
+                    strokeDashoffset: [anime.setDashoffset, 0],                    
+                    offset: 6000
+                })
+                .add({
+                    targets: '#owlg .eyeblack',                    
+                    fill: [{value:'rgba(0, 0, 0, 0)'},
+                        {value: '#585858'}                        
+                      ],
+                    offset: 7500
+                })
+                .add({
+                    targets: '#owlg .beak', 
+                    strokeDashoffset: [anime.setDashoffset, 0],                    
+                    offset: 9000
+                })
+                .add({
+                    targets: '#owlg .beak',                     
+                    fill: [{value:'rgba(0, 0, 0, 0)'},
+                        {value: '#ffb833'}                        
+                      ],
+                    offset: 10500
+                })
+                .add({
+                    targets: '#owlg .foot', 
+                    strokeDashoffset: [anime.setDashoffset, 0],                    
+                    offset: 12000
+                })
+                .add({
+                    targets: '#owlg .foot',                    
+                    fill: [{value:'rgba(0, 0, 0, 0)'},
+                        {value: '#ffb833'}                        
+                      ],
+                    offset: 13500
+                });
+                
+            
+        
+        </script>
+       
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Owlery</title>
+        <meta charset = "UTF-8">
+        <link rel = "stylesheet" href = "Owlery.css">        
+    </head>
+    <body>
+        <svg id = "owl1" width = "100%" height = "100%" viewBox = "0 0 500 300">
+            
+            
+            <g id ="owlg">
+                <path class = "owlpath el" d = "M150,50 L190,85 C225,65 275,65 310,85 L350,50 330,100 C335,110 345,130 345,155 C345,220 325,220 320,225 C290,250 260,250 250,250 C240,250 210,250 180,225 C175,220 155,220 155,155 C155,130 165,110 170,100 z" /> 
+
+                <circle class ="eyewhite el" cx = "210" cy = "130" r = "25"></circle>
+                <circle class ="eyewhite el" cx = "290" cy = "130" r = "25"></circle>
+                <circle class ="eyeblack el" cx = "210" cy = "130" r = "10"></circle>
+                <circle class ="eyeblack el" cx = "290" cy = "130" r = "10"></circle> 
+
+                <path class = "beak el" d ="M230,155 270,155 250,185 z"></path>
+
+                <path class = "foot el" d= "M165,245
+                                         C180,210 200,210 215,245 z"></path>
+
+                <path class = "foot el" d= "M285,245
+                                         C300,210 320,210 335,245 z"></path>
+            </g>
+            
+        </svg> 
+        
+        <script src = "anime-master/anime.js"></script>
+        
+        <script>
+            var lineDrawing = anime({
+              targets: '#owlg .el',
+              strokeDashoffset: [anime.setDashoffset, 0],
+              easing: 'easeInOutSine',
+              duration: 1500,
+              delay: function(el, i) { return i * 2500 },              
+              loop: false
+            });
+        
+        </script>
+       
+    </body>
+</html>

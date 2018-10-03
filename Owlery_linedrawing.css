@@ -1,0 +1,43 @@
+body {
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+}
+
+.motionpath_path {
+    fill:rgba(0, 0, 0, 0);
+    stroke: #ffffff;
+    stroke-width: 5px;
+}
+
+#owldiv {
+    width: 200px;
+    height: 200px;
+}
+
+#owlg .owlpath {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #12ccff;
+    stroke-width: 1px;
+}
+
+#owlg .eyewhite {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #ffffff;
+    stroke-width: 1px;
+}
+
+#owlg .eyeblack {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #585858;
+    stroke-width: 1px;
+}
+
+#owlg .foot, .beak {
+    fill: rgba(0, 0, 0, 0);
+    stroke: #ffb833;
+    stroke-width: 1px;
+}
+
+
